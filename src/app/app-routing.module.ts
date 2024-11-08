@@ -8,7 +8,22 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'recuperarcontra',
+    redirectTo: 'recuperarcontra',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'error404',
     pathMatch: 'full'
   },
   {
@@ -26,6 +41,14 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'recuperarcontra',
+    loadChildren: () => import('./recuperarcontra/recuperarcontra.module').then( m => m.RecuperarcontraPageModule)
+  },
+  {
+    path: 'error404',
+    loadChildren: () => import('./error404/error404.module').then( m => m.Error404PageModule)
   },
 ];
 
