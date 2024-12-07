@@ -1,0 +1,92 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Juan Pérez",
+      "usuario": "JPerez",
+      "contrasena": "1234",
+      "tipo": "alumno"
+    },
+    {
+      "id": "2",
+      "nombre": "María López",
+      "usuario": "MLopez",
+      "contrasena": "mlo2004356",
+      "tipo": "profesor"
+    },
+    {
+      "id": "3",
+      "nombre": "Juan Tapia",
+      "usuario": "JTapia",
+      "contrasena": "tapiachile",
+      "tipo": "alumno"
+    },
+    {
+      "id": "4",
+      "nombre": "Matias Silva",
+      "usuario": "Msilva",
+      "contrasena": "marojas",
+      "tipo": "profesor"
+    },
+    {
+      "id": "5",
+      "nombre": "Francisco Silva",
+      "usuario": "francsilvaj",
+      "contrasena": "21643942-2",
+      "tipo": "alumno"
+    },
+    {
+      "id": "6",
+      "nombre": "Brayan Felipe",
+      "usuario": "BFelipe",
+      "contrasena": "felip200673",
+      "tipo": "profesor"
+    },
+    {
+      "id": "7",
+      "nombre": "Oscar Valdez",
+      "usuario": "OValdez",
+      "contrasena": "valdez56788",
+      "tipo": "alumno"
+    },
+    {
+      "id": "8",
+      "nombre": "Jessica Jara",
+      "usuario": "JJara",
+      "contrasena": "arajara992",
+      "tipo": "profesor"
+    },
+    {
+      "id": "9",
+      "nombre": "Alex Cristian",
+      "usuario": "ACristian",
+      "contrasena": "cristian2345",
+      "tipo": "alumno"
+    },
+    {
+      "id": "10",
+      "nombre": "Cristian Briones",
+      "usuario": "CBriones",
+      "contrasena": "briones12345",
+      "tipo": "profesor"
+    }
+  ],
+  "asistencias": [
+  
+    {
+      "id": "1733411709087",
+      "presente": true,
+      "data": "Matemáticas 2024-12-05"
+    },
+    {
+      "id": "1733413324634",
+      "presente": true,
+      "data": "Matemáticas 2024-12-05"
+    },
+    {
+      "id": "1733444073789",
+      "presente": true,
+      "data": "Física 2024-12-06"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Profesor Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Profesor Lista</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Dropdown para seleccionar asignatura -->
+  <ion-item>
+    <ion-label>Seleccione una asignatura</ion-label>
+    <ion-select [(ngModel)]="selectedSubject" (ionChange)="onSubjectChange()">
+      <ion-select-option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Mostrar el QR de la asignatura seleccionada -->
+  <div *ngIf="selectedSubject">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ selectedSubject }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="qr-code">
+          <img [src]="'https://api.qrserver.com/v1/create-qr-code/?data=' + currentQRCode + '&size=150x150'" alt="QR Code">
+        </div>
+        <p>Escanea este código para registrar la asistencia del día</p>
+        <ion-button (click)="refreshQRCode()">Refrescar QR</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

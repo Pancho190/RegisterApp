@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Alumnos Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Alumnos Lista</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Botón para escanear el QR -->
+  <ion-button expand="full" (click)="scanQRCode()">Registrar mi asistencia</ion-button>
+
+  <!-- Lista de clases asistidas -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Clases asistidas</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let attendance of attendedClasses">
+      <ion-label>{{ attendance.data }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

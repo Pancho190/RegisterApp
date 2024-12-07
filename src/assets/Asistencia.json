@@ -1,0 +1,97 @@
+{
+  "asistencias": [
+
+    {
+      "id" :"0",
+      "nombre": "Cristian Briones",
+      "usuario": "CBriones1",
+      "contrasena": "1234",
+      "presente": true,
+      "tipo": "alumno"
+    },
+    {
+      "usuario" : "CBriones",
+      "contrasena" : 1234,
+      "tipo": "alumno"
+    },
+    {
+      "id": "1",
+      "nombre": "Juan Pérez",
+      "usuario": "JPerez",
+      "contrasena": "1234",
+      "tipo": "alumno"
+    },
+    {
+      "id": "2",
+      "nombre": "María López",
+      "usuario": "MLopez",
+      "contrasena": "mlo2004356",
+      "presente": false,
+      "tipo": "profesor"
+    },
+    {
+      "id": "3",
+      "nombre": "Juan Tapia",
+      "usuario": "JTapia",
+      "contrasena": "tapiachile",
+      "presente": true,
+      "tipo": "alumno"
+    },
+    {
+      "id": "4",
+      "nombre": "Matias Silva",
+      "usuario": "Msilva",
+      "contrasena": "marojas",
+      "presente": false,
+      "tipo": "profesor"
+    },
+    {
+      "id": "5",
+      "nombre": "Francisco Silva",
+      "usuario": "francsilvaj",
+      "contrasena": "21643942-2",
+      "presente": true,
+      "tipo": "alumno"
+    },
+    {
+      "id": "6",
+      "nombre": "Brayan Felipe",
+      "usuario": "BFelipe",
+      "contrasena": "felip200673",
+      "presente": false,
+      "tipo": "profesor"
+    },
+    {
+      "id": "7",
+      "nombre": "Oscar Valdez",
+      "usuario": "OValdez",
+      "contrasena": "valdez56788",
+      "presente": true,
+      "tipo": "alumno"
+    },
+    {
+      "id": "8",
+      "nombre": "Jessica Jara",
+      "usuario": "JJara",
+      "contrasena": "arajara992",
+      "presente": false,
+      "tipo": "profesor"
+    },
+    {
+      "id": "9",
+      "nombre": "Alex Cristian",
+      "usuario": "ACristian",
+      "contrasena": "cristian2345",
+      "presente": true,
+      "tipo": "alumno"
+    },
+    {
+      "id": "10",
+      "nombre": "Cristian Briones",
+      "usuario": "CBriones",
+      "contrasena": "briones12345",
+      "presente": false,
+      "tipo": "profesor"
+    }
+  ]
+}
