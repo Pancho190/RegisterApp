@@ -52,11 +52,8 @@ export class AlumnosListaPage implements OnInit {
   }
 
   cerrarSesion() {
-    // Limpia el almacenamiento local o cualquier variable de sesión
     localStorage.clear();
     sessionStorage.clear();
-
-    // Redirige al usuario a la página de login
     this.router.navigate(['/login']);
   }
 }
