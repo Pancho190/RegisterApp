@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 import { AttendanceService } from '../services/attendance-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alumnos-lista',
@@ -9,13 +10,18 @@ import { AttendanceService } from '../services/attendance-service.service';
 })
 export class AlumnosListaPage implements OnInit {
   attendedClasses: any[] = []; // Almacena las clases asistidas
+  router: any;
 
-  constructor(private attendanceService: AttendanceService) {}
+  constructor(private attendanceService: AttendanceService, router: Router) {}
+
+
 
   ngOnInit() {
     // Cargar asistencias al iniciar
     this.loadAttendances();
   }
+
+  
 
   // Método para escanear el QR y registrar asistencia
   scanQRCode() {
@@ -44,4 +50,14 @@ export class AlumnosListaPage implements OnInit {
       this.attendedClasses = data;
     });
   }
+
+  cerrarSesion() {
+    // Limpia el almacenamiento local o cualquier variable de sesión
+    localStorage.clear();
+    sessionStorage.clear();
+
+    // Redirige al usuario a la página de login
+    this.router.navigate(['/login']);
+  }
 }
+
