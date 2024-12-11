@@ -1,14 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Observable, retry } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthserviceService {
-  private dbUrl = 'http://localhost:3000/usuarios'; // Endpoint JSON Server para usuarios
+  dbUrl = 'https://e6771af7-3036-4e88-87a0-ffe6c7b75719-00-1q7ws21v90607.kirk.replit.dev/'; // Endpoint JSON Server para usuarios
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    })
+  };
+
 
   constructor(private http: HttpClient) {}
+
+  getUserByUsername(username: string): Observable<any>{
+    return this.http.get(`${this.dbUrl}/usuarios?username=${username}`, this.httpOptions.headers);
+  }
+
 
   // Método para obtener la lista de usuarios
   getUsuarios(): Observable<any> {
