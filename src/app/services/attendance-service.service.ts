@@ -1,14 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AttendanceService {
-  private apiUrl = 'http://localhost:3000'; // URL del json-server
+  apiUrl = 'https://e6771af7-3036-4e88-87a0-ffe6c7b75719-00-1q7ws21v90607.kirk.replit.dev/'; // URL del json-server
+
+  HttpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    })
+  }
 
   constructor(private http: HttpClient) {}
+
+  getUsersByUsername(username: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/usuarios?username=${username}`, {headers: this.HttpOptions.headers});
+  }
 
   // Obtener usuarios
   getUsers(): Observable<any> {
