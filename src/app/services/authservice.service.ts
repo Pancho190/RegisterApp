@@ -20,7 +20,7 @@ export class AuthserviceService {
   constructor(private http: HttpClient) {}
 
   getUserByUsername(username: string): Observable<any>{
-    return this.http.get(`${this.dbUrl}/usuarios?username=${username}`, this.httpOptions.headers);
+    return this.http.get(`${this.dbUrl}/usuarios?username=${username}`, this.httpOptions);
   }
 
 
@@ -31,7 +31,7 @@ export class AuthserviceService {
 
   // Método para validar usuario y contraseña
   validateUser(username: string, password: string): Observable<any> {
-    return new Observable((observer) => {
+    return new Observable((observer: { next: (arg0: any) => void; complete: () => void; }) => {
       this.getUsuarios().subscribe((data: any[]) => {
         const user = data.find(
           (item: any) =>
