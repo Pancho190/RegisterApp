@@ -2,7 +2,6 @@
   <ion-toolbar>
     <ion-title>Profesor Lista</ion-title>
   </ion-toolbar>
-  <ion-button color="danger" (click)="cerrarSesion()">Cerrar Sesión</ion-button>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -38,5 +37,8 @@
         <ion-button color="dark" (click)="refreshQRCode()">Refrescar QR</ion-button>
       </ion-card-content>
     </ion-card>
+  </div>
+  <div>
+    <ion-button color="warning" (click)="cerrarSesion()">Cerrar Sesión</ion-button>
   </div>
 </ion-content>

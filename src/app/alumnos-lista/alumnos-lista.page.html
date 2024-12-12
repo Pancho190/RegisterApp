@@ -2,7 +2,6 @@
   <ion-toolbar>
     <ion-title>Alumnos Lista</ion-title>
   </ion-toolbar>
-  <ion-button color="danger" (click)="cerrarSesion()">Cerrar Sesión</ion-button>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -24,4 +23,6 @@
       <ion-label>{{ attendance.data }}</ion-label>
     </ion-item>
   </ion-list>
+  <br>
+  <ion-button color="warning" (click)="cerrarSesion()">Cerrar Sesión</ion-button>
 </ion-content>
