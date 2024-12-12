@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QrAttendanceService } from '../services/qr-attendance.service';  // Asegúrate de que el servicio esté correctamente importado
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-profesor-lista',
@@ -11,7 +13,8 @@ export class ProfesorListaPage implements OnInit {
   selectedSubject: string = '';  // Asignatura seleccionada
   currentQRCode: string = '';  // Código QR actual
 
-  constructor(private qrService: QrAttendanceService) { }
+
+  constructor(private qrService: QrAttendanceService, private router: Router) { }
 
   ngOnInit() {
     // Inicializar el primer código QR
@@ -36,5 +39,11 @@ export class ProfesorListaPage implements OnInit {
   // Método para refrescar el código QR
   refreshQRCode() {
     this.generateQRCode();  // Refrescar el QR
+  }
+
+  cerrarSesion() {
+    localStorage.clear();
+    sessionStorage.clear();
+    this.router.navigate(['/login']);
   }
 }
