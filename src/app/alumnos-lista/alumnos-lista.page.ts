@@ -10,18 +10,13 @@ import { Router } from '@angular/router';
 })
 export class AlumnosListaPage implements OnInit {
   attendedClasses: any[] = []; // Almacena las clases asistidas
-  router: any;
 
-  constructor(private attendanceService: AttendanceService, router: Router) {}
-
-
+  constructor(private attendanceService: AttendanceService, private router: Router) {}
 
   ngOnInit() {
     // Cargar asistencias al iniciar
     this.loadAttendances();
   }
-
-  
 
   // Método para escanear el QR y registrar asistencia
   scanQRCode() {
@@ -60,4 +55,3 @@ export class AlumnosListaPage implements OnInit {
     this.router.navigate(['/login']);
   }
 }
-
